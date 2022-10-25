@@ -61,6 +61,16 @@ const Header = () => {
                                     Blog
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    to='/login'
+                                    aria-label='About Us'
+                                    title='About Us'
+                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                >
+                                    Login
+                                </Link>
+                            </li>
                         </ul>
                         <div className='lg:hidden'>
                             <button
@@ -157,6 +167,16 @@ const Header = () => {
                                                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                     >
                                                         Blog
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        to='/login'
+                                                        aria-label='About Us'
+                                                        title='About Us'
+                                                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                    >
+                                                        Login
                                                     </Link>
                                                 </li>
                                             </ul>
