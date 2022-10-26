@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { createContext, useContext, useState } from 'react';
+import { FaUserAlt } from 'react-icons/fa';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import logo from '../../image/logo3.png'
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+
+            })
+            .catch(error => console.error(error))
+    }
+
+
     return (
         <div>
             <nav className='bg-blue-400'>
@@ -61,17 +75,49 @@ const Header = () => {
                                     Blog
                                 </Link>
                             </li>
-                            <li>
-                                <Link
-                                    to='/login'
-                                    aria-label='About Us'
-                                    title='About Us'
-                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
-                                >
-                                    Login
-                                </Link>
-                            </li>
+                            {
+                                !user?.uid ?
+                                    <li>
+                                        <Link
+                                            to='/login'
+                                            aria-label='About Us'
+                                            title='About Us'
+                                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                        >
+                                            Login
+                                        </Link>
+                                    </li>
+                                    :
+                                    <>
+                                        <li>
+                                            <Link
+                                                to='/login'
+                                                onClick={handleLogOut}
+                                                aria-label='logOut'
+                                                title='logOut'
+                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                            >
+                                                logOut
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to='/profile'
+                                                aria-label='logOut'
+                                                title={user?.displayName}
+                                                className='font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                            >
+                                                <div className="relative flex-shrink-0">
+                                                    <span className="absolute bottom-0 right-0 w-4 h-4 dark:bg-green-600 border rounded-full dark:text-gray-100 dark:border-gray-900"></span>
+                                                    <img src={user.photoURL} alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700" />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                    </>
+                            }
+
                         </ul>
+
                         <div className='lg:hidden'>
                             <button
                                 aria-label='Open Menu'
@@ -169,16 +215,47 @@ const Header = () => {
                                                         Blog
                                                     </Link>
                                                 </li>
-                                                <li>
-                                                    <Link
-                                                        to='/login'
-                                                        aria-label='About Us'
-                                                        title='About Us'
-                                                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
-                                                    >
-                                                        Login
-                                                    </Link>
-                                                </li>
+                                                {
+                                                    !user?.uid ?
+                                                        <li>
+                                                            <Link
+                                                                to='/login'
+                                                                aria-label='About Us'
+                                                                title='About Us'
+                                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                            >
+                                                                Login
+                                                            </Link>
+                                                        </li>
+                                                        :
+                                                        <>
+                                                            <li>
+                                                                <Link
+                                                                    to='/login'
+                                                                    onClick={handleLogOut}
+                                                                    aria-label='logOut'
+                                                                    title='logOut'
+                                                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                                >
+                                                                    logOut
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link
+                                                                    to='/profile'
+                                                                    aria-label='logOut'
+                                                                    title={user?.displayName}
+                                                                    className='font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                                                >
+                                                                    <div className="relative flex-shrink-0">
+                                                                        <span className="absolute bottom-0 right-0 w-4 h-4 dark:bg-green-600 border rounded-full dark:text-gray-100 dark:border-gray-900"></span>
+                                                                        <img src={user.photoURL} alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700" />
+                                                                    </div>
+                                                                </Link>
+                                                            </li>
+                                                        </>
+                                                }
+
                                             </ul>
                                         </nav>
                                     </div>

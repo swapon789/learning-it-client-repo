@@ -7,6 +7,9 @@ import FAQ from '../FAQ/FAQ';
 
 import Home from '../Home/Home';
 import Login from '../Login/Login';
+import PrivateRout from '../PrivateRout/PrivateRout';
+import Profile from '../Profile/Profile';
+import Register from '../Register/Register';
 
 export const routes = createBrowserRouter([
     {
@@ -27,11 +30,19 @@ export const routes = createBrowserRouter([
             },
             {
                 path:'/faq',
-                element:<FAQ></FAQ>
+                element:<PrivateRout><FAQ></FAQ></PrivateRout>
             },
             {
-                path:'login',
+                path:'/login',
                 element: <Login></Login>
+            },
+            {
+                path:'/register',
+                element: <Register></Register>
+            },
+            {
+                path:'/profile',
+                element:<Profile></Profile>
             }
            
         ]
