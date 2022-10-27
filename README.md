@@ -1,10 +1,20 @@
 # Getting Started with Learning IT Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Learning IT Solution](https://exquisite-lolly-62c021.netlify.app/).
 
 ## Available Scripts
 
-In the project directory, you can run:
+1.First a react project insttal and set up this site tailWind css
+2.Then Install React router dom 
+3.Instal firbase and set up firbase config
+4.Create a Home page and create a navbar side
+5.Crate a Login form and register form use to Firbase Authentication and activation this site
+6.Create a course title site and set there category and details page.
+7.Use the page crate ther details option and checkout page .
+8.Create a user profile page on the page use to User are login and there profile information.
+9.Create a PDF dowloader and togol otion in the top of nav bar .
+10.Set up a frequently details and describe the website description.
+11.At last set up a InterView question.
 
 ### `npm start`
 

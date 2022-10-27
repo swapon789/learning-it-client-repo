@@ -2,7 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CourseContent from '../CaourseContent/CourseContent';
 import CourseCategory from '../CourseCategory/CourseCategory';
-import './Course.css'
+
 
 const Course = () => {
 
