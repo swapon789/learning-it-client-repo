@@ -2,9 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Link, } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import logo from '../../image/logo3.png'
+import DarkModeToggle from "react-dark-mode-toggle";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(() => false);
     const { user, logOut } = useContext(AuthContext);
     console.log(user);
 
@@ -82,7 +84,7 @@ const Header = () => {
                                             to='/login'
                                             aria-label='About Us'
                                             title='About Us'
-                                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                            className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                         >
                                             Login
                                         </Link>
@@ -117,7 +119,12 @@ const Header = () => {
                             }
 
                         </ul>
-                      
+                        <DarkModeToggle
+                            onChange={setIsDarkMode}
+                            checked={isDarkMode}
+                            size={80}
+                        />
+
                         <div className='lg:hidden'>
                             <button
                                 aria-label='Open Menu'
@@ -142,7 +149,7 @@ const Header = () => {
                             </button>
                             {isMenuOpen && (
                                 <div className='absolute top-0 left-0 w-full'>
-                                    <div className='p-5 bg-white border rounded shadow-sm'>
+                                    <div className='p-5 bg-blue-500 border rounded shadow-sm'>
                                         <div className='flex items-center justify-between mb-4'>
                                             <div>
                                                 <Link
@@ -258,6 +265,11 @@ const Header = () => {
                                                 }
 
                                             </ul>
+                                            <DarkModeToggle
+                                                onChange={setIsDarkMode}
+                                                checked={isDarkMode}
+                                                size={80}
+                                            />
                                         </nav>
                                     </div>
                                 </div>
