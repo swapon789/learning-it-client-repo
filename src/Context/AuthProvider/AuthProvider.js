@@ -26,10 +26,7 @@ const AuthProvider = ({ children }) => {
   const updateUserProfile = (profile)=>{
     return updateProfile(auth.currentUser, profile)
   }
-  const verifyEmail = () =>{
-    return sendEmailVerification(auth.currentUser)
-  }
-
+  
   const logOut = () =>{
     setLoading(true);
     return signOut(auth)
@@ -56,7 +53,7 @@ const AuthProvider = ({ children }) => {
         creatUser,
         signIn,
         updateUserProfile, 
-        verifyEmail
+        
     };
     return (
         <AuthContext.Provider value={authInfo}>

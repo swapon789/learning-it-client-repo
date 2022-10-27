@@ -20,7 +20,7 @@ const Header = () => {
 
     return (
         <div>
-            <nav className='bg-blue-400'>
+            <nav className='bg-indigo-500 text-white'>
                 <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 '>
                     <div className='relative flex items-center justify-between'>
                         <Link
@@ -30,7 +30,7 @@ const Header = () => {
                             className='inline-flex items-center'
                         >
                             <img style={{ height: "50px" }} src={logo} alt="" />
-                            <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
+                            <span className='ml-2 text-xl font-bold tracking-wide  uppercase'>
                                 Learning IT
                             </span>
                         </Link>
@@ -40,7 +40,7 @@ const Header = () => {
                                     to='/'
                                     aria-label='Home'
                                     title='Home'
-                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                 >
                                     Home
                                 </Link>
@@ -50,7 +50,7 @@ const Header = () => {
                                     to='/course'
                                     aria-label='Shop'
                                     title='Shop'
-                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                 >
                                     Course
                                 </Link>
@@ -60,7 +60,7 @@ const Header = () => {
                                     to='/faq'
                                     aria-label='Cart'
                                     title='Cart'
-                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                 >
                                     <p>Faq</p>
                                 </Link>
@@ -70,7 +70,7 @@ const Header = () => {
                                     to='/blog'
                                     aria-label='About Us'
                                     title='About Us'
-                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                 >
                                     Blog
                                 </Link>
@@ -95,7 +95,7 @@ const Header = () => {
                                                 onClick={handleLogOut}
                                                 aria-label='logOut'
                                                 title='logOut'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                             >
                                                 logOut
                                             </Link>
@@ -115,8 +115,9 @@ const Header = () => {
                                         </li>
                                     </>
                             }
-
+                            
                         </ul>
+
 
                         <div className='lg:hidden'>
                             <button
@@ -152,7 +153,7 @@ const Header = () => {
                                                     className='inline-flex items-center'
                                                 >
                                                     <img style={{ height: "50px" }} src={logo} alt="" />
-                                                    <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase hover:text-violet-800'>
+                                                    <span className='ml-2 text-xl font-bold tracking-wide  uppercase hover:text-violet-800'>
                                                         Home
                                                     </span>
                                                 </Link>
@@ -180,7 +181,7 @@ const Header = () => {
                                                         to='/'
                                                         aria-label='Shop'
                                                         title='Shop'
-                                                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                        className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                     >
                                                         Home
                                                     </Link>
@@ -190,7 +191,7 @@ const Header = () => {
                                                         to='/course'
                                                         aria-label='Cart'
                                                         title='Cart'
-                                                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                        className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                     >
                                                         <p> Course</p>
                                                     </Link>
@@ -200,7 +201,7 @@ const Header = () => {
                                                         to='/faq'
                                                         aria-label='Cart'
                                                         title='Cart'
-                                                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                        className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                     >
                                                         <p>Faq</p>
                                                     </Link>
@@ -210,7 +211,7 @@ const Header = () => {
                                                         to='/blog'
                                                         aria-label='About Us'
                                                         title='About Us'
-                                                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                        className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                     >
                                                         Blog
                                                     </Link>
@@ -222,7 +223,7 @@ const Header = () => {
                                                                 to='/login'
                                                                 aria-label='About Us'
                                                                 title='About Us'
-                                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                                className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                             >
                                                                 Login
                                                             </Link>
@@ -235,7 +236,7 @@ const Header = () => {
                                                                     onClick={handleLogOut}
                                                                     aria-label='logOut'
                                                                     title='logOut'
-                                                                    className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
+                                                                    className='font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400 hover:text-pink-600'
                                                                 >
                                                                     logOut
                                                                 </Link>
@@ -255,7 +256,7 @@ const Header = () => {
                                                             </li>
                                                         </>
                                                 }
-
+                                                
                                             </ul>
                                         </nav>
                                     </div>
