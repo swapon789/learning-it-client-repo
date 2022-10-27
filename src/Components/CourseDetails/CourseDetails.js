@@ -1,13 +1,17 @@
 import React from 'react';
+import Pdf from "react-to-pdf";
 import { Link, useLoaderData } from 'react-router-dom';
+
+
+const ref = React.createRef();
 
 
 const CourseDetails = () => {
     const course = useLoaderData();
-    const { title, picture, trainer_Img, trainer_name,age, details,trainer_email,phone } = course;
+    const { title, picture, trainer_Img, trainer_name, age, details, trainer_email, phone } = course;
     return (
-        <div className='bg-black py-4'>
-            <div  className="flex w-1/3 text-white bg-blue-500 mx-auto flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+        <div className='bg-pink-300 py-4'>
+            <div ref={ref} className="flex w-1/3 text-white bg-blue-500 mx-auto flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
                 <div className="flex space-x-4">
                     <img alt="" src={trainer_Img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                     <div className="flex flex-col space-y-1">
@@ -26,8 +30,14 @@ const CourseDetails = () => {
                     <p>Email:{trainer_email}</p>
                     <p>Mobile:{phone}</p>
                 </div>
-                <Link to='/course'><button type="button" className="px-8 py-3 text-center text-white bg-green-500  mx-auto font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800">Back to Previous page</button></Link>
+                <div className='flex justify-between pt-3'>
+                    <Link to='/course'><button type="button" className="px-3 py-3  text-center text-white bg-green-500  mx-auto font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800">Back to Previous page</button></Link>
+                    <Pdf targetRef={ref} filename="code-example.pdf">
+                        {({ toPdf }) => <button onClick={toPdf} className='px-3 py-3  text-white bg-red-600 rounded-3xl'>Download PDF</button>}
+                    </Pdf>
+                </div>
             </div>
+
 
         </div>
     );

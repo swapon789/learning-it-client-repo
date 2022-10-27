@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
-import { FaUserAlt } from 'react-icons/fa';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import logo from '../../image/logo3.png'
 
@@ -75,6 +74,7 @@ const Header = () => {
                                     Blog
                                 </Link>
                             </li>
+
                             {
                                 !user?.uid ?
                                     <li>
@@ -115,10 +115,9 @@ const Header = () => {
                                         </li>
                                     </>
                             }
-                            
+
                         </ul>
-
-
+                      
                         <div className='lg:hidden'>
                             <button
                                 aria-label='Open Menu'
@@ -158,6 +157,7 @@ const Header = () => {
                                                     </span>
                                                 </Link>
                                             </div>
+
                                             <div>
                                                 <button
                                                     aria-label='Close Menu'
@@ -256,7 +256,7 @@ const Header = () => {
                                                             </li>
                                                         </>
                                                 }
-                                                
+
                                             </ul>
                                         </nav>
                                     </div>
