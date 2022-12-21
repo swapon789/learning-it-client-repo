@@ -43,11 +43,14 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                toast.success("Succes Login")
                 form.reset()
                 setError('')
+                
 
                 if (user) {
                     navigate(from, { replace: true });
+                    
                 }
                 
             })
