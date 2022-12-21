@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <div>
-            <nav className='bg-indigo-500 text-white'>
+            <nav data-theme="night" className=' text-white'>
                 <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 '>
                     <div className='relative flex items-center justify-between'>
                         <Link
@@ -119,11 +119,6 @@ const Header = () => {
                             }
 
                         </ul>
-                        <DarkModeToggle
-                            onChange={setIsDarkMode}
-                            checked={isDarkMode}
-                            size={80}
-                        />
 
                         <div className='lg:hidden'>
                             <button
@@ -265,11 +260,7 @@ const Header = () => {
                                                 }
 
                                             </ul>
-                                            <DarkModeToggle
-                                                onChange={setIsDarkMode}
-                                                checked={isDarkMode}
-                                                size={80}
-                                            />
+                
                                         </nav>
                                     </div>
                                 </div>

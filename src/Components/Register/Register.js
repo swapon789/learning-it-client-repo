@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Register = () => {
@@ -49,8 +49,8 @@ const Register = () => {
    
 
     return (
-        <div className='bg-teal-500 py-3'>
-            <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100 bg-gray-400">
+        <div className='py-3 bg-black'>
+            <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100 bg-gray-300">
                 <h1 className="text-2xl font-bold text-center">Register Form</h1>
                 <form onSubmit={handleSubmit} novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
@@ -72,7 +72,9 @@ const Register = () => {
                     <p className='text-red-500'>
                         {error}
                     </p>
-                    <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400 bg-blue-500">Register</button>
+                    <button className="block w-full p-3 text-center text-white rounded-sm dark:text-gray-900 dark:bg-violet-400 bg-blue-500">Register</button>
+                    <p className="px-3 text-sm text-black flex justify-end dark:text-gray-400"> <Link to='/login' className='text-red-800 underline'>Login form</Link> </p>
+
                 </form>
                 
             </div>

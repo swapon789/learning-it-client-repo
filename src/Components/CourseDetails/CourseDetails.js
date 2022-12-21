@@ -10,8 +10,8 @@ const CourseDetails = () => {
     const course = useLoaderData();
     const { title, picture, trainer_Img, trainer_name, age, details, trainer_email, phone } = course;
     return (
-        <div className='bg-pink-300 py-4'>
-            <div ref={ref} className="flex  text-white bg-blue-500 mx-auto flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+        <div data-theme="black" className='py-4'>
+            <div data-theme="synthwave" ref={ref} className="flex  text-white  mx-auto flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
                 <div className="flex space-x-4">
                     <img alt="" src={trainer_Img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                     <div className="flex flex-col space-y-1">
@@ -38,8 +38,8 @@ const CourseDetails = () => {
                 </div>
             </div>
 
-
         </div>
+
     );
 };
 
