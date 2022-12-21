@@ -2,11 +2,10 @@ import React, { useContext, useState } from 'react';
 import { Link, } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import logo from '../../image/logo3.png'
-import DarkModeToggle from "react-dark-mode-toggle";
+
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(() => false);
     const { user, logOut } = useContext(AuthContext);
     console.log(user);
 
